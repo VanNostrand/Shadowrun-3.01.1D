@@ -1,0 +1,194 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{cmap}
+\usepackage{cite}
+\usepackage{graphicx,framed}	%deutsche Sprache, Bilder, Rahmen
+\usepackage[utf8]{inputenc}		%direkt deutsche Umlaute und ?-Zeichen eingeben
+\usepackage{textcomp}			%das ?-Zeichen für OT und T1
+\usepackage{color}			%Farbpaket
+\usepackage{amsmath}			%Mathepaket - was sonst? =)
+%\usepackage{amsthm}			%theorem-Paket für Beweise, z.B. begin{proof} oder \qed
+\usepackage{amsfonts}			%Schrift um z.B. Mathesymbole wie Folgerungspfeile zu schreiben
+\usepackage{amssymb}			%mehr Symbole - yes! =)
+\usepackage{stmaryrd}			%\lightning für Widerspruch
+\usepackage{flafter}			%Gleitobjekte besser positionieren
+\usepackage{placeins}			%it defines a \FloatBarrier command beyond which floats may not pass.
+					%A package option allows you to declare that floats may not pass a
+					%\subsection command, but you can place \FloatBarriers wherever you choose.
+					%URL: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=floats
+%\usepackage[scaled=.90]{helvet}		%die Zeile gehört dazu
+%\usepackage{courier}			%die auch
+%\usepackage{mathptmx}			%bessere Schriften für PDFs
+\usepackage{mathrsfs}			%Schreibschriftbuchstaben für Mathemodus: \mathscr{Buchstabe}
+\usepackage[mathcal]{euscript}		%Kaligraphiebuchstaben für Mathemodus: \mathcal{Buchstabe}
+%\usepackage{makeidx}			%Index-Erstellung
+\usepackage{enumerate}			%Aufzählungen mit römischen Zahlen usw.
+\usepackage[ngerman]{babel}
+\usepackage{algorithmic}		%Quellcode einbauen
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{booktabs}			%für besser aussehende Tabellen als das Standardzeug. 
+
+%PDF-spezifische Dinge
+\usepackage[linktocpage,
+colorlinks,
+bookmarks,
+bookmarksopen,
+pdfpagelabels=true]{hyperref}
+
+\newcommand{\projekturl}{\url{https://github.com/VanNostrand/Shadowrun-3.01.1D}}
+
+% pdf-spezifisches, hier keine Leerzeilen machen!
+\hypersetup{
+	pdftitle = {Shadowrun 3.01.1 D},
+	pdfsubject = {Ergänzende Errata zu Shadowrun 3.01 D},
+	%pdfauthor = {\projekturl},
+	pdfkeywords = {Shadowrun, Errata},
+	% Anzeige aller Ebenen abstellen
+	bookmarksopen = false,
+	% Bookmarks nicht durchnummerieren
+	%bookmarksnumbered = false
+	% Link-Farben (Standardfarben)
+	linkcolor = red,
+	anchorcolor = black,
+	citecolor = green,
+	filecolor = magenta,
+	menucolor = red,
+	urlcolor = red,
+	% Links nicht unterstreichen
+	frenchlinks,
+	% Links umbrechen
+	breaklinks = true,
+	%
+	pdfpagemode = UseNone,
+	pdffitwindow = false
+}
+
+\newcommand{\ditoengl}{Dieser Fehler taucht identisch in der englischen Version auf. }
+\newcommand{\errata}[1]{Letzte, offizielle Errata ist V#1.}
+
+%opening
+\title{Shadowrun 3.01.1 D}
+\subtitle{Ergänzende Errata zu Shadowrun 3.01 D\\Version 0.1}
+\author{\small\projekturl}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Weil Shadowrun 3 vom Markt verschwunden ist und die letzten Auflagen trotz offizieller Errata noch Fehler enthalten, die insbesondere durch die deutsche Übersetzung entstanden sind, ist in Fanarbeit dieses Dokument entstanden, das diese Fehler auflistet und korrigiert, ohne Hausregeln einzuführen. Dabei wid der Stil der offiziellen Errata eingehalten, d.h. es werden keine vollständigen Regeltexte abgedruckt, nur Flicken, die auf das gedruckte Buch angewendet werden müssen, ggf. mit einer ergänzenden Erklärung.
+\end{abstract}
+
+\tableofcontents
+
+\section{Allgemeines}
+Um eine eindeutige Entscheidungsgrundlage zu haben, wann was ein Fehler ist und wie dieser Fehler gelöst wird, benötigt es Richtlinien, die die Grundlage dieser Entscheidungen bilden.
+Diese Errata werden daher durch eine geordnete Menge von Richtlinien angeführt, deren Reihenfolge gewichtend ist. Weitere Gewichtungen werden durch die Ordnungsrelation $\prec$ angegeben, d.h. bei einem Ausdruck \glqq A $\prec$ B\grqq{} hat der rechte Teilausdruck \glqq B\grqq{} eine höhere Gewichtung, als der linke Teil \glqq A\grqq.
+
+\subsection{Richtlinien}
+\begin{framed}
+\begin{enumerate}
+ \item Es gelten die Originalregeln in letzter Auflage, nachdem eventuell vorhandene, offizielle Errata dieser Auflage angewendet wurden.
+ \item Es gilt: Englische Regeln $\prec$ Deutsche Regeländerungen.
+ \item Es gilt: Deutsche Regelsemantik $\prec$ Englische Regelsemantik.
+ \item Es gilt: SR2 $\prec$ SR3. Dies impliziert: Regeln der zweiten Edition, die nicht in die dritte Edition aufgenommen oder ersetzt wurden, sind auch in der dritten Edition gültig.
+ \item Konsens innerhalb aller SR3 Bände ist das \textit{Shadowrun 3.01 D} Grundbuch. SR3 Erweiterungsbände haben die Grundregeln nur zu ergänzen, nicht zu verändern. Veränderungen in diesem Rahmen werden automatisch als optionale Regeln betrachtet, die nach Absprache in der Gruppe zum Konsens werden und dabei die entsprechenden Grundregeln ersetzen.
+ \item Reine Übersetzungsfehler werden mit einem * gekennzeichnet und entstammen der gleichen Stelle im jeweiligen englischen Quellbuch, sofern keine andere Quelle angegeben wird.
+ \item Sonstige Änderungen entstehen nur durch logische Schlussfolgerungen, nicht durch Interpretationen der Regeln (dies ist dem Meister überlassen) oder Hausregeln (dies ist den Gruppen überlassen).
+\end{enumerate}
+\end{framed}
+
+\subsection{Mitarbeit}
+Wenn unter obigen Richtlinien ein Buch einen Fehler beinhaltet, der hier noch nicht angesprochen wird, bitte auf \projekturl{} bescheid sagen oder direkt das Projekt forken und einen Patch oder ein Pull-Request einreichen.
+Dabei Buch, Seite, Abschnitt, Fehler und (falls möglich) Korrektur nennen.
+Fehlerkorrekturen zu dieser Errata werden auch gerne entgegengenommen.
+Bitte nicht wegen Regelfragen oder Regeldiskussionen mailen (dafür gibt es Foren und Spielgruppen).
+
+\section{Ergänzende und erklärende Errata zu SR 3.01 D}
+\subsection{Arsenal 2060}
+\errata{1.4}
+\begin{description}
+ \item[S. 7 Vorletzter Absatz, Regel-(Re)-Änderung zum Salvenmodus] Kennzeichnung des Absatzes als Optional.
+ 
+ Begründung: Richtlinien 2 und 5. Die Regel wäre nur mit einer Errata oder Neuauflage von \textit{Shadowrun 3.01 D} verbindlich geworden. Wertet man SR4 als diese Neuauflage, so handelt es sich bei dem Absatz im \textit{Arsenal 2060} sogar um einen Fehler, weil dort auch nur jede Kugel \textit{nach} der ersten zum Rückstoß gerechnet wird.
+ 
+ Damit bleibt ein Rückstoßmodifikator von 2 für Salvenmodus verbindlich, ein Rückstoßmodifikator von 3 für Salvenmodus muss in der Gruppe festgelegt werden.
+\end{description}
+
+\subsection{Mensch und Maschine 3.01 D}
+\errata{1.2}
+\begin{description}
+ \item[S. 85 Natürlich oder verstärkt*] Ganzen Abschnitt ersetzen durch
+ \begin{quote}
+  \glqq Weil Bioware speziell dafür geschaffen wird, sich an die Physiologie des Benutzers anzupassen, werden Attributsboni als natürlich \textit{und unverstärkt} angesehen. Mit anderen Worten: Sie gelten als Änderungen der Basisattribute des Charakters.\grqq
+ \end{quote}
+ Dies impliziert (u.a. auch mit der Regel, dass man eine aufwendige medizinische Untersuchung zur Erkennung benötigt und dass Bioware aus körpereigenen Zellen hergestellt wird), dass Bioware als natürlich gewachsenes Körperteil zählt, was u.a. Auswirkungen auf Initiativepatts hat und ebenfalls die Steigerungskosten für Attribute vergrößert, weil man den durch Bioware erhöhten Wert als Ausgangswert nehmen muss!
+\end{description}
+
+\subsection{Shadowrun 3.01 D, 6. Auflage}
+Offizielle Errata V1.0 und Indexkorrektur gibt es nur für die schrecklich vermurkste, erste Auflage des Grundregelwerks. Von der zweiten, korrigierten Auflage bis zur sechsten Auflage scheint es keine Unterschiede mehr zu geben. Damit treffen die folgenden Errata auf alle Auflagen des Grundregelwerks zu.
+
+\begin{description}
+ \item[S. 172 Askennen, 3. Absatz*] \glqq und eine Askennenprobe gegen Mindestwurf 4 ablegen\grqq{} wird ersetzt durch \glqq und eine Askennenprobe mit Intelligenzwürfeln gegen Mindestwurf 4 ablegen\grqq.
+
+ \item[S. 264 Verschlingen]
+Es wird ein Nahkampf abgewickelt, wobei der Geist seine Schnelligkeit als Nahkampffertigkeit benutzt.
+Die Angabe \glqq(statt Reaktion)\grqq{} ist nicht nur überflüssig (weil man eindeutig Schnelligkeit benutzen soll), sondern auch falsch (weil das Ausweichattribut für Nahkampf die Stärke ist). \ditoengl
+
+ \item[S. 266f Geister und Drachen]
+Der Klammerwertmultiplikator bei Schnelligkeit ist der Laufmultiplikator, bspw. bei $K+3(\times4)$. Ein Leerzeichen vor der öffnenden Klammer hätte Verwechselung mit einem mathematischen Klammerterm ausgeschlossen. In der englischen Version ist dies korrekt, bspw. $F+3\ (\times4)$.
+
+ \item[S. 292 Magschlösser*]
+\glqq Die Typen III und IV sind biometrische Systeme\grqq{} ist semantisch falsch übersetzt, korrekt muss es heißen: \glqq Biometrische Systeme sind nur von Typ III oder IV\grqq.
+
+Mathematisch bedeutet dies: Nicht jedes Typ III oder IV Magschloss ist Biometrisch, aber jedes Biometrische Magschloss ist von Typ III oder IV.
+Dadurch wird klar, warum es in der Tabelle S. 294 einen eigenen Eintrag für Biometrische Magschlösser gibt, wenn doch schon III und IV biometrisch sein sollen.
+\end{description}
+
+\section{Kompatibilität mit SR2 Regelbüchern}
+Da SR3 eine Zusammenfassung und leichte Überarbeitung der vielen SR2 Bücher ist, sind die meisten Regeln kompatibel. Für Hintergrundinformationen gilt dies uneingeschränkt, für Ausrüstung und Regeln größtenteils.
+Abweichungen stehen hier.
+
+\subsection{Corporate Security Handbook}
+Kann fast 1:1 übernommen werden, vielleicht gibt es kleinere Abweichungen bei Magie, Matrix und Magschlossregeln, der Rest besteht aus Hintergrundinformationen, in verschiedenen Büchern übernommener Ausrüstung, Archetypen und Meisterinformationen; besteht höchstens aus zusätzlicher Information. Genaue Abweichungen unbekannt.
+
+\subsection{Cybertechnology}
+Fast alle Inhalte des Buches wurden in \textit{Mensch und Maschine 3.01 D} übernommen. Die Beispielcharaktere im Kapitel Chrome Kings sind im Zweifelsfall korrekturbedürftig, weil die Menge an Bioware nicht mehr von der Konstitution, sondern von Essenz + 3 begrenzt wird. Das Buch dient nur noch als Verständnishilfe und Liste für die ganzen Produkte.
+
+\subsection{Grimoire}
+Inhalte scheinen 1:1 ins Grundbuch oder ins \textit{Schattenzauber 3.01 D} geflossen zu sein, wo noch weitere Regeln, Zauber etc. dazugekommen sind. Abweichungen unbekannt.
+
+\subsection{Kreuzfeuer}
+Kann fast 1:1 übernommen werden, weil die eine Hälfte aus Hintergrundinformationen besteht und der Rest aus Ausrüstung, die komplett übernommen und fast gar nicht geändert wurde. Der Regelteil bietet optionale Regeln an, die Bestandteil von SR3 wurden (z.B. verzögerte Explosion von Granaten) oder trotz Streichung in SR3 weiterverwendet werden können (z.B. Hülsenlose Munition vs Hülsenmunition).
+
+Gefundene Abweichungen sind:
+\begin{description}
+ \item[S. 48 Blendgranaten] Verweis auf AFR-7 Blendgranaten im Straßensamuraikatalog, daher werden ihre Regeln im \textit{Arsenal 2060} durch S. 70 Blitzgranaten ersetzt.
+ \item[S. 52 Tarnkleidung] Korrektur (Vertauschung) der Panzerungswerte von Tarnjacke und Vollanzug auf S. 80, 152 im \textit{Arsenal 2060}.
+\end{description}
+
+\subsection{Rigger Handbuch}
+Fahrzeuge wurden übernommen, ob die Stats und Fahrzeugregeln nochmal korrigiert wurden, ist unbekannt. Bei nichtvorhandenem Rigger 3 Buch behält es seine volle Gültigkeit.
+
+\subsection{Shadowtech}
+Alle Produkte im Buch wurden ins Grundbuch oder \textit{Mensch und Maschine 3.01 D} übernommen, aber vieles wurde regeltechnisch angepasst. Zur Bioware wurde auch jeweils hinzugefügt, wie sie unter Stress reagiert. Man beachte vor allem:
+\begin{description}
+ \item[Symbionten] wurde ggf. geändert.
+ \item[Mnemoverstärker] wurde umfassend geändert.
+ \item[Muskelverstärkung] wurde in Muskelverstärkung und -straffung aufgeteilt.
+ \item[Headware] wurde fast durchgehend und teilweise umfassend geändert, bspw. das Enzephalon.
+ \item[Sprunghydraulik] wurde geändert.
+\end{description}
+Das Buch ist wie das Cybertechnology nur noch eine Verständnishilfe und Liste für die ganzen Produkte; Details sollten immer dem Grundbuch oder \textit{Mensch und Maschine 3.01 D} entnommen werden.
+
+\subsection{Straßensamuraikatalog 2.01 D}
+\begin{description}
+ \item[S. 38 Verbessertes Gasventil] wird gestrichen, ebenso wie die normalen Gasventile. In der dritten Edition gibt es nur noch einen Typ von Gasventil, der Rückstoßkompensation in Höhe seiner Stufe bietet.
+ \item[S. 44 AFR-7 Blendgranate] Im \textit{Arsenal 2060} durch S. 70 Blitzgranaten ersetzt, inklusive Regeln für die Blendungseffekte und Blitzkompensation.
+ \item[S. 108 Trollstraßensamurai] In der Form streichen, denn Essenz 0 ist nicht regelkonform, auch nicht nach der zweiten Edition.
+\end{description}
+
+\subsection{Virtual Realities 2.01 D}
+Der Deckmeister wurde in der 3er Edition nicht als Connection übernommen, behält aber seine Gültigkeit. Ansonsten fasst \textit{Matrix 3.01 D} alles zusammen, was in VR2 und anderen Publikationen erschienen ist und aktualisiert und erweitert die Regeln nochmal. Abweichungen unbekannt.
+\end{document}
