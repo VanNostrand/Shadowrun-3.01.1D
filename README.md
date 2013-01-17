@@ -37,3 +37,9 @@ Errata anderer Leute werden gerne aufgenommen, sofern sie den Richtlinien entspr
 Es wird auch gerne Hinweisen auf Fehlern nachgegangen, am besten werden aber durch den Hinweis direkt die Quellen zitiert, damit weniger Arbeit entsteht.
 
 Regeldiskussionen finden nicht statt, Regelfragen werden nicht beantwortet, dafür gibt es Internetforen, Spielleiter und Spielgruppen.
+
+PDF erstellen
+=============
+Das Projekt ist in LaTeX geschrieben, die Shadowrun-3.01.1D.tex kann mit einem Texteditor (nicht Word!) bearbeitet werden und wird danach zweimal(!) mit dem Kommando pdflatex zu einer pdf-Datei übersetzt.
+Ist auf dem System zusätzlich das Programm make installiert, kann die Übersetzung durch Eingabe von make erfolgen.
+Das Kommando make clean entfernt dann den üblichen LaTeX-Ballast, der für die Übersetzung angelegt wird.
