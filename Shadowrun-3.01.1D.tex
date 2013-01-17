@@ -1,33 +1,18 @@
 \documentclass[a4paper]{scrartcl}
-\usepackage[T1]{fontenc}
-\usepackage{cmap}
-\usepackage{cite}
-\usepackage{graphicx,framed}	%deutsche Sprache, Bilder, Rahmen
-\usepackage[utf8]{inputenc}		%direkt deutsche Umlaute und ?-Zeichen eingeben
-\usepackage{textcomp}			%das ?-Zeichen für OT und T1
-\usepackage{color}			%Farbpaket
-\usepackage{amsmath}			%Mathepaket - was sonst? =)
-%\usepackage{amsthm}			%theorem-Paket für Beweise, z.B. begin{proof} oder \qed
-\usepackage{amsfonts}			%Schrift um z.B. Mathesymbole wie Folgerungspfeile zu schreiben
-\usepackage{amssymb}			%mehr Symbole - yes! =)
-\usepackage{stmaryrd}			%\lightning für Widerspruch
-\usepackage{flafter}			%Gleitobjekte besser positionieren
-\usepackage{placeins}			%it defines a \FloatBarrier command beyond which floats may not pass.
-					%A package option allows you to declare that floats may not pass a
-					%\subsection command, but you can place \FloatBarriers wherever you choose.
-					%URL: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=floats
-%\usepackage[scaled=.90]{helvet}		%die Zeile gehört dazu
-%\usepackage{courier}			%die auch
-%\usepackage{mathptmx}			%bessere Schriften für PDFs
-\usepackage{mathrsfs}			%Schreibschriftbuchstaben für Mathemodus: \mathscr{Buchstabe}
-\usepackage[mathcal]{euscript}		%Kaligraphiebuchstaben für Mathemodus: \mathcal{Buchstabe}
-%\usepackage{makeidx}			%Index-Erstellung
-\usepackage{enumerate}			%Aufzählungen mit römischen Zahlen usw.
-\usepackage[ngerman]{babel}
-\usepackage{algorithmic}		%Quellcode einbauen
-\usepackage{longtable}
-\usepackage{listings}
-\usepackage{booktabs}			%für besser aussehende Tabellen als das Standardzeug. 
+\usepackage[T1]{fontenc}	% Passendes Fontencoding zur Suche im pdf
+\usepackage{textcomp}		% das EUR-Zeichen für OT und T1
+\usepackage[osf,sc]{mathpazo}	% Palatinoschrift mit Minuskelziffern (osf) und echten Kapitälchen (sc)
+\usepackage{ellipsis}		% optimaler Weißraum bei Ellipsen (…)
+\usepackage{microtype}		% Typografisches Feintuning (Randausgleich etc.)
+\usepackage{fixltx2e}		% LaTeX Fixes zwischen Releases, ggf. inkompatibel mit alten Dokumenten
+\usepackage{ifthen}
+
+\usepackage[ngerman]{babel}	% neue deutsche Rechtschreibung
+\usepackage[euler]{textgreek}
+\usepackage[utf8]{inputenc}	% direkt deutsche Umlaute und EUR-Zeichen eingeben
+\usepackage{graphicx,framed}	% Bilder, Rahmen
+\usepackage{enumerate}		%Aufzählungen mit römischen Zahlen usw.
+\usepackage{booktabs}		%für besser aussehende Tabellen als das Standardzeug. 
 
 %PDF-spezifische Dinge
 \usepackage[linktocpage,
