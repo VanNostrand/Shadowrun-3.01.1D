@@ -7,7 +7,7 @@ Hintergrund
 ===========
 Shadowrun ist ein Pen und Paper Rollenspiel, das 1989 von FASA entwickelt und publiziert wurde.
 1992 wurde eine überarbeitete Regelversion 2 herausgebracht, für die mit der Zeit viele Erweiterungsregeln erschienen.
-Das Regelwerk in Version 3 korrigiert die Regeln der Edition 2 und fasst sie und die meisten Regeln der Erweiterungsregeln zusammen.
+Das Regelwerk in Version 3 korrigiert die Regeln der Edition 2 und fasst die Grund- und meisten Erweiterungsregeln der zweiten Edition zusammen.
 
 Die deutsche Bearbeitung der Regeln wurde von FanPro vorgenommen, wobei nicht nur die Regeln übersetzt wurden, sondern auch Errata und leichte Änderungen vorgenommen wurden, wodurch den deutschen Regelversionen stets der Zusatz .01D angefügt wurde.
 
