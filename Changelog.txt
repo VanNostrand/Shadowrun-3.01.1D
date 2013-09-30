@@ -1,0 +1,6 @@
+v0.1.1 
+Übersetzungsfehler Cloak =/= Tarnung beim Kampfdecker auf S. 326 durch Deckmantel korrigiert.
+Changelog erstellt.
+
+v0.1
+Erstausgabe
