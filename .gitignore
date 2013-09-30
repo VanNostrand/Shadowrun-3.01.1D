@@ -2,6 +2,7 @@
 *.acr
 *.alg
 *.aux
+*.backup
 *.bbl
 *.blg
 *.dvi
