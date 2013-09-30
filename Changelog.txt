@@ -1,3 +1,8 @@
+v0.1.2
+Triviale Umformulierung bei der Verschlingen-Errata.
+Angabe englischer Referenzwerke.
+Einfaches Readme Update.
+
 v0.1.1 
 Übersetzungsfehler Cloak =/= Tarnung beim Kampfdecker auf S. 326 durch Deckmantel korrigiert.
 Changelog erstellt.

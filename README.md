@@ -11,9 +11,9 @@ Das Regelwerk in Version 3 korrigiert die Regeln der Edition 2 und fasst die Gru
 
 Die deutsche Bearbeitung der Regeln wurde von FanPro vorgenommen, wobei nicht nur die Regeln übersetzt wurden, sondern auch Errata und leichte Änderungen vorgenommen wurden, wodurch den deutschen Regelversionen stets der Zusatz .01D angefügt wurde.
 
-Die Firma FanPro ging Ende der 90er Jahre insolvent, die Lizenzen wechselten und ein neues, grundsätzlich verändertes Shadowrun in Regelversion 4 wurde veröffentlicht.
+Die Firma FanPro ging Ende der 90er Jahre insolvent, die Lizenzen wechselten (momentan Catalyst Game Labs und Pegasus) und ein neues, grundsätzlich verändertes Shadowrun in Regelversion 4 wurde veröffentlicht, inzwischen ist Version 5 aktuell.
 
-Damit wird Shadowrun 3.01D nicht mehr aufgelegt oder mit Errata versorgt und ist nur noch im Antiquariat zu haben.
+Damit wird Shadowrun 3.01D nicht mehr aufgelegt oder mit Errata versorgt und ist (als Druck) nur noch im Antiquariat zu haben. Die offiziellen eBooks sind teilweise auch nur Scans der alten Drucke und erfahren damit keine Änderung mehr.
 
 Spieler, die diese älteren Regeln gesammelt haben und den damaligen Storyhintergrund und die damaligen technischen Hintergründe mehr lieben als alles von der 4er Version, sitzen auf einem Mix von 3er und 2er Regelbüchern, die sich teilweise ergänzen, ersetzen oder korrigieren und bis heute unkorrigierte Übersetzungs- oder Regelfehler beinhalten.
 
@@ -33,6 +33,7 @@ Mitarbeit
 =========
 Die Arbeit an diesem Projekt findet ausschließlich über GitHub statt:
 https://github.com/VanNostrand/Shadowrun-3.01.1D
+
 Errata anderer Leute werden gerne aufgenommen, sofern sie den Richtlinien entsprechen, die im Shadowrun-3.01.1D Dokument aufgelistet sind.
 Es wird auch gerne Hinweisen auf Fehlern nachgegangen, am besten werden aber durch den Hinweis direkt die Quellen zitiert, damit weniger Arbeit entsteht.
 
